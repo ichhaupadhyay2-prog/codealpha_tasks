@@ -3,44 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CodeAlpha E-Commerce</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Project Management Tool</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <nav>
-        <h1>My Store</h1>
-        <button id="cart-btn">
-            Cart(<span id="cart-count">0</span>)
-        </button>
-    </nav>
-    <section class="products">
-        <div class="product">
-            <img
-             src="https://via.placeholder.com/200"
-              alt="Product">
-            <h3>Smart watch</h3>
-            <p>RS.1999</p>
-            <button onclick="addToCart()">Add to Cart</button>
-        </div>
-        <div class="product">
-            <img
-             src="https://via.placeholder.com/200"
-              alt="Product">
-            <h3>headphones</h3>
-            <p>RS.1499</p>
-            <button
-             onclick="addToCart()">Add to Cart</button>
-        </div>
-        <div class="product">
-            <img
-             src="https://via.placeholder.com /200"
-              alt="Product">
-            <h3>keyboard</h3>
-            <p>RS.999</p>
-            <button
-             onclick="addToCart()">Add to Cart</button>
-        </div>
-    </section>
+    <h1>Project Management Tool</h1>
+    <div class="container"></div>
+   <input type="text" id="taskInput" placeholder="Enter Task">
+   <input type="date" id="dueDate">
+   <input type="text" id="assignedTo" placeholder="Assign To">
+   <select id="priority">
+        <option value="High">High Priority</option>
+        <option value="Medium">Medium Priority</option>
+        <option value="Low">Low Priority</option>
+    </select>
+    <button id="addBtn">Add Task</button>
+    <div id="taskList"></div>
+</div>
     <script src="script.js"></script>
+    
 </body>
 </html>

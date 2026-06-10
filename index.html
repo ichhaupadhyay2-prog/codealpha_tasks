@@ -3,22 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Social Media Platform</title>
-    <link rell="stylesheet"
-    href="style.css">
+    <title>Project Management Tool</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-        <div  class="profile"></div>
-       <h1>My Social Media</h1>
-       <h2>Echcha Upadhyay</h2>
-       <p>BCA Student | Web Developer</p>
-        <textarea id="postInput"
-        placeholder="What's on your mind?"></textarea>
-        <br><br>
-        <button id="postBtn">Post</button>
-        <button id="followBtn"
-        onclick="followUser()">Follow</button>
-    <div id="posts"></div>
+    <h1>Project Management Tool</h1>
+    <div class="container"></div>
+   <input type="text" id="taskInput" placeholder="Enter Task">
+   <input type="date" id="dueDate">
+   <input type="text" id="assignedTo" placeholder="Assign To">
+   <select id="priority">
+        <option value="High">High Priority</option>
+        <option value="Medium">Medium Priority</option>
+        <option value="Low">Low Priority</option>
+    </select>
+    <button id="addBtn">Add Task</button>
+    <div id="taskList"></div>
+</div>
     <script src="script.js"></script>
     
 </body>

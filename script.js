@@ -1,47 +1,42 @@
-document.getElementById("postBtn").addEventListener("click", function() {
-    let text =
-    document.getElementById("postInput").value;
-    if (text.trim() ===""){
-        alert("Please write something!");
+document.getElementById("addBtn").addEventListener("click",function(){
+    let task =
+    document.getElementById("taskInput").value;
+    let date = document.getElementById("dueDate").value;
+    let priority =
+      document.getElementById("priority").value;
+      let assignedTo =
+      document.getElementById("assignedTo").value;
+    if(task.trim() === ""){
+        alert(" Please Enter a task");
         return;
     }
-      let postDiv =
-      document.createElement("div");
-      postDiv.classList.add("post");
-      postDiv.innerHTML ="<p>"+ text +
-    "</p>" +
-    "<button onclick='likePost(this)'>❤️Like (0)</button>" +
-    "<button onclick ='deletePost(this)'>Delete</button>" +
-    "<input type='text' placeholder='Write a comment...'>" +
-     "<button onclick ='addComment(this)'>Comment</button>"+
-     "<div class='comments'></div>";
-     "<button onclick ='deletePost(this)'>Delete</button>"
-      document.getElementById("posts").appendChild(postDiv);
-      document.getElementById("postInput").value ="";
-});
-function likePost(btn) {
-    let count =
-    parseInt(btn.dataset.count|| 0);
-    count++;
-    btn.dataset.count =count;
-    btn.innerHTML ="❤️ Like(" + count + ")";
-}
-    function followUser() {
-        document.getElementById("followBtn").innerHTML = "following";
-}
-function addComment(btn) {
-    let commentInput = btn.previousElementSibling;
-    let commentText = commentInput.value;
-    if (commentText.trim() === "") {
-        return;
-    }
-    let p =document.createElement("p");
-    p.innerHTML = "💬" + commentText;
-    btn.nextElementSibling.appendChild(p);
-    commentInput.value = "";
-    }
-    function deletePost(btn) {
-        btn.parentElement.remove();
-    }
-    
+        let div =
+        document.createElement("div");
+        div.className ="task";
+        div.innerHTML = 
+         "<h3>"+task + "</h3>"+
+         "<p><b>Assigned To:</b>"+ assignedTo +"</p>"+
+         "<p><b>Due Date :</b>"+ date +"</p>"+
+            "<p><b>Priority :</b>"+ priority +"</p>"+
+            "<p class='Status'>Status : Pending</p>"+
+            "<p><b>Assigned To:</b>"+ assignedTo +"</p>"+
+        "<button onclick='completeTask(this)'>Complete</button>"+
+        "<button onclick='deleteTask(this)'>Delete</button>";
+        "<input type='text' placeholder='Add Comment'>" +
+        "<button>Add Comment</button>";
+        document.getElementById("taskList").appendChild(div);
 
+        document.getElementById("taskInput").value = "";
+        document.getElementById("dueDate").value = "";
+    });
+    function completeTask(btn){
+        let taskDiv = btn.parentElement;
+        taskDiv.style.backgroundColor = "lightgreen";
+        taskDiv.querySelection(".status").innerHTML
+        =
+        "Status:Completed";
+        btn.innerHTML = "Completed";
+}
+function deleteTask(btn){
+    btn.parentElement.remove();
+}

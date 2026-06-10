@@ -3,23 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Social Media Platform</title>
-    <link rell="stylesheet"
-    href="style.css">
+    <title>CodeAlpha E-Commerce</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-        <div  class="profile"></div>
-       <h1>My Social Media</h1>
-       <h2>Echcha Upadhyay</h2>
-       <p>BCA Student | Web Developer</p>
-        <textarea id="postInput"
-        placeholder="What's on your mind?"></textarea>
-        <br><br>
-        <button id="postBtn">Post</button>
-        <button id="followBtn"
-        onclick="followUser()">Follow</button>
-    <div id="posts"></div>
+    <nav>
+        <h1>My Store</h1>
+        <button id="cart-btn">
+            Cart(<span id="cart-count">0</span>)
+        </button>
+    </nav>
+    <section class="products">
+        <div class="product">
+            <img
+             src="https://via.placeholder.com/200"
+              alt="Product">
+            <h3>Smart watch</h3>
+            <p>RS.1999</p>
+            <button onclick="addToCart()">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img
+             src="https://via.placeholder.com/200"
+              alt="Product">
+            <h3>headphones</h3>
+            <p>RS.1499</p>
+            <button
+             onclick="addToCart()">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img
+             src="https://via.placeholder.com /200"
+              alt="Product">
+            <h3>keyboard</h3>
+            <p>RS.999</p>
+            <button
+             onclick="addToCart()">Add to Cart</button>
+        </div>
+    </section>
     <script src="script.js"></script>
-    
 </body>
 </html>
